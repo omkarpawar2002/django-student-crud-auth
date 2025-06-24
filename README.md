@@ -63,3 +63,31 @@ django-student-crud-auth/
 │
 └── README.md             # Project documentation
 ```
+
+
+---
+
+## 🔐 Authentication
+
+- Uses Django's built-in `User` model
+- Session-based login and logout
+- Protected views using `@login_required`
+
+---
+
+## ⚙️ MySQL Database Configuration
+
+In your `settings.py`, the `DATABASES` section should look like this:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database_name',
+        'USER': 'your_mysql_user',
+        'PASSWORD': 'your_mysql_password',
+    }
+}
+
+
+
