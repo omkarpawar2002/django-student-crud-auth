@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>UPDATE STUDENT</title>
+{% endblock %}
+
+{% block content %}
+<form class="container" method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <button type="submit">UPDATE STUDENT</button>
+    <a href="{% url 'show_student' %}"><button type="button">CANCEL STUDENT</button></a>
+</form>
+{% endblock %}

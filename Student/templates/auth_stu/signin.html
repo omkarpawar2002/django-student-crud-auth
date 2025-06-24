@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>SIGN IN</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" class="container">
+    {% csrf_token %}
+
+    <input type="hidden" name="next" value="{{ next }}">
+
+    <label for="id_username">Username:</label><br>
+    <input type="text" name="username" id="id_username" class="form-control"><br><br>
+
+    <label for="id_password1">Password:</label><br>
+    <input type="password" name="password" id="id_password1" class="form-control"><br><br>
+
+    <button type="submit" class="btn btn-dark col-5 me-3">LOG IN</button>
+    <a href="{% url 'signup' %}"><button type="button" class="btn btn-dark col-5 me-3 float-end">REGISTER</button></a>
+</form>
+
+
+{% endblock %}

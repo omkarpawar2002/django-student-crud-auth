@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>DELETE STUDENT</title>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <h1>{{obj.stu_id}}</h1>
+    <h1>{{obj.name}}</h1>
+    <h1>{{obj.email}}</h1>
+    <button type="submit">DELETE STUDENT</button>
+    <a href="{% url 'show_student' %}"><button type="button">CANCEL STUDENT</button></a>
+</form>
+{% endblock %}

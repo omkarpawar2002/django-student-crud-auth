@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Document</title>
+{% endblock %}
+
+{% block content %}
+<table class="table table-stripped table-dark">
+    <thead>
+        <tr>
+            <th>STUDENT ID</th>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>GENDER</th>
+            <th>SUBJECT</th>
+            <th>ADDRESS</th>
+            <th>DATE OF BIRTH</th>
+            <th>EMAIL ID</th>
+            <th>PASSWORD</th>
+            <th>ELIGIBILITY</th>
+            <th>ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in obj %}
+        <tr>
+            <td>{{record.stu_id}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.city}}</td>
+            <td>{{record.gender}}</td>
+            <td>{{record.subject}}</td>
+            <td>{{record.address}}</td>
+            <td>{{record.dob}}</td>
+            <td>{{record.email}}</td>
+            <td>{{record.password}}</td>
+            <td>{{record.eligible}}</td>
+            <td>
+                <a href="{% url 'update_student' record.stu_id %}"><button class="btn btn-light btn-large me-3">UPDATE</button></a>
+                <a href="{% url 'delete_student' record.stu_id %}"><button class="btn btn-light btn-large me-3">DELETE</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
