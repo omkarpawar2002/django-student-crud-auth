@@ -93,5 +93,44 @@ DATABASES = {
 Make sure to install mysqlclient
 ```bash
  pip install mysqlclient
+```
+
+Clone the Repository
+```bash
+git clone https://github.com/omkarpawar2002/django-student-crud-auth.git
+cd django-student-crud-auth
+```
+
+Create and Activate Virtual Environment
+```bash
+python -m venv .venv or py -m virtualenv .venv
+.\.venv\Scripts\activate   # On Windows
+```
+
+Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Generate requirements.txt with:
+```bash
+pip freeze > requirements.txt
+```
+
+Configure settings.py for MySQL
+Edit the DATABASES setting in your student/settings.py
+
+Run Migrations
+```bash
+python manage.py migrate
+```
+
+Start the Server
+```bash
+python manage.py runserver
+or
+py manage.py runserver
+```
+
 
 
