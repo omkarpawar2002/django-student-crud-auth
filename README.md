@@ -26,16 +26,40 @@ This is a Django-based Student Management System that allows users to **Create, 
 ---
 
 ## 📁 Project Structure
-
+```
 django-student-crud-auth/
 │
-├── .venv/ # Virtual environment (ignored in Git)
-├── student/ # Main Django project folder (settings, urls, wsgi)
-├── app1/ # Your first app (e.g., students)
-├── app2/ # Your second app (e.g., accounts or profiles)
-├── templates/ # HTML templates
-├── static/ # Optional static files
-├── manage.py # Django management script
-├── requirements.txt # Python dependencies
-├── .gitignore
-└── README.md
+├── .venv/                # Python virtual environment (excluded from Git)
+│
+├── student/              # The Django project folder
+│   ├── __init__.py
+│   ├── settings.py       # Global settings like apps, middleware, DB, etc.
+│   ├── urls.py           # Root URL configurations
+│   ├── wsgi.py           # For WSGI deployment
+│
+├── stu_info/                 # First Django app (e.g., 'students')
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+│   └── admin.py
+│
+├── auth_stu/                 # Second Django app (e.g., 'accounts' for auth)
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+│   └── admin.py
+│
+├── templates/            # Shared HTML templates for all apps
+│   ├── base.html
+│   └── (app-specific templates)
+│
+├── manage.py             # Django command-line utility
+│
+├── requirements.txt      # All required Python packages
+│
+├── .gitignore            # Files and folders Git should ignore
+│
+└── README.md             # Project documentation
+```
