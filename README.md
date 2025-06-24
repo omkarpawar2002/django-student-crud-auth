@@ -88,6 +88,7 @@ DATABASES = {
         'PASSWORD': 'your_mysql_password',
     }
 }
+```
 
 Make sure to install mysqlclient
 #bash pip install mysqlclient
