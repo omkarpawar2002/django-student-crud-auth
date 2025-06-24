@@ -117,13 +117,14 @@ Generate requirements.txt with:
 pip freeze > requirements.txt
 ```
 
-Configure settings.py for MySQL
+Configure settings.py for MySQL and 
 Edit the DATABASES setting in your student/settings.py
 
 Run Migrations
 ```bash
 python manage.py migrate
 ```
+Then open:http://127.0.0.1:8000
 
 Start the Server
 ```bash
