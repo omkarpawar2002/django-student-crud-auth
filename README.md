@@ -27,3 +27,15 @@ This is a Django-based Student Management System that allows users to **Create, 
 
 ## 📁 Project Structure
 
+django-student-crud-auth/
+│
+├── .venv/ # Virtual environment (ignored in Git)
+├── student/ # Main Django project folder (settings, urls, wsgi)
+├── app1/ # Your first app (e.g., students)
+├── app2/ # Your second app (e.g., accounts or profiles)
+├── templates/ # HTML templates
+├── static/ # Optional static files
+├── manage.py # Django management script
+├── requirements.txt # Python dependencies
+├── .gitignore
+└── README.md
