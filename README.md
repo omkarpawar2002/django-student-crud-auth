@@ -89,5 +89,7 @@ DATABASES = {
     }
 }
 
+Make sure to install mysqlclient
+#bash pip install mysqlclient
 
 
